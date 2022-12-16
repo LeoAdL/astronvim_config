@@ -133,7 +133,7 @@ local config = {
                         ["nvim-tree"] = false,
                         ["nvim-web-devicons"] = true,
                         rainbow = true,
-                        symbols_outline = false,
+                        symbols_outline = true,
                         telescope = true,
                         treesitter = true,
                         vimwiki = false,
@@ -258,6 +258,9 @@ local config = {
                         --   end,
                         -- },
                         ["catppuccin/nvim"] = { as = catppuccin },
+                        ["simrat39/symbols-outline.nvim"] = {
+                                config = function() require("symbols-outline").setup() end,
+                        },
                         ["lervag/vimtex"] = { config = function() require "user.plugins.vimtex" end },
                         ["kdheepak/lazygit.nvim"] = {},
                         ["folke/trouble.nvim"] = { config = function() require "user.plugins.trouble" end },
