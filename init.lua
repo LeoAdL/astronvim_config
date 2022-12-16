@@ -224,6 +224,7 @@ local config = {
                         ["<leader>bc"] = { "<cmd>BufferLinePickClose<cr>", desc = "Pick to close" },
                         ["<leader>bj"] = { "<cmd>BufferLinePick<cr>", desc = "Pick to jump" },
                         ["<leader>bt"] = { "<cmd>BufferLineSortByTabs<cr>", desc = "Sort by tabs" },
+                        ["<leader>U"] = { "<cmd>UndotreeToggle<cr>" },
                         -- quick save
                         -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
                 },
@@ -288,6 +289,7 @@ local config = {
                         },
                         ["hkupty/iron.nvim"] = { config = function() require "user.plugins.iron" end },
                         ["RRethy/vim-illuminate"] = {},
+                        ["mbbill/undotree"] = {},
                 },
                 -- All other entries override the require("<key>").setup({...}) call for default plugins
                 ["null-ls"] = function(config) -- overrides `require("null-ls").setup(config)`
