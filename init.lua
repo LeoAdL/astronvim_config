@@ -65,6 +65,7 @@ local config = {
                         shiftwidth = 4,
                         expandtab = true,
                         smartindent = true,
+                        autochdir = true,
                 },
                 g = {
                         mapleader = " ", -- sets vim.g.mapleader
