@@ -60,6 +60,11 @@ local config = {
                         spell = false, -- sets vim.opt.spell
                         signcolumn = "auto", -- sets vim.opt.signcolumn to auto
                         wrap = true, -- sets vim.opt.wrap
+                        tabstop = 4,
+                        softtabstop = 4,
+                        shiftwidth = 4,
+                        expandtab = true,
+                        smartindent = true,
                 },
                 g = {
                         mapleader = " ", -- sets vim.g.mapleader
@@ -157,7 +162,6 @@ local config = {
                         "texlab",
                         "ltex",
                         "marksman",
-                        "grammarly",
                 },
                 formatting = {
                         -- control auto formatting on save
@@ -303,13 +307,13 @@ local config = {
                                 null_ls.builtins.formatting.black,
                                 null_ls.builtins.formatting.latexindent,
                                 null_ls.builtins.diagnostics.chktex,
-                                null_ls.builtins.formatting.prettier,
                                 null_ls.builtins.formatting.isort,
                                 null_ls.builtins.diagnostics.pylint,
                                 null_ls.builtins.completion.luasnip,
                                 null_ls.builtins.diagnostics.luacheck,
                                 null_ls.builtins.formatting.stylua,
                                 null_ls.builtins.code_actions.gitsigns,
+                                null_ls.builtins.formatting.prettierd,
                                 -- Set a formatter
                                 -- null_ls.builtins.formatting.stylua,
                                 -- null_ls.builtins.formatting.prettier,
