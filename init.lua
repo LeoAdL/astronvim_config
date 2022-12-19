@@ -267,7 +267,7 @@ local config = {
         as = catppuccin,
         config = function()
           require("catppuccin").setup {
-            flavour = "mocha", -- latte, frappe, macchiato, mocha
+            flavour = "frappe", -- latte, frappe, macchiato, mocha
             background = { -- :h background
               light = "latte",
               dark = "mocha",
@@ -353,19 +353,14 @@ local config = {
       ["ggandor/leap.nvim"] = {
         config = function() require("leap").add_default_mappings() end,
       },
-      ["alexghergh/nvim-tmux-navigation"] = {
+      ["numToStr/Navigator.nvim"] = {
         config = function()
-          require("nvim-tmux-navigation").setup {
-            disable_when_zoomed = true, -- defaults to false
-            keybindings = {
-              left = "<C-h>",
-              down = "<C-j>",
-              up = "<C-k>",
-              right = "<C-l>",
-              last_active = "<C-\\>",
-              next = "<C-Space>",
-            },
-          }
+          require("Navigator").setup()
+          vim.keymap.set({ "n", "t" }, "<C-h>", "<CMD>NavigatorLeft<CR>")
+          vim.keymap.set({ "n", "t" }, "<C-l>", "<CMD>NavigatorRight<CR>")
+          vim.keymap.set({ "n", "t" }, "<C-k>", "<CMD>NavigatorUp<CR>")
+          vim.keymap.set({ "n", "t" }, "<C-j>", "<CMD>NavigatorDown<CR>")
+          vim.keymap.set({ "n", "t" }, "<C-p>", "<CMD>NavigatorPrevious<CR>")
         end,
       },
       ["hkupty/iron.nvim"] = { config = function() require "user.plugins.iron" end },
