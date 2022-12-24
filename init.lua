@@ -29,28 +29,6 @@ local config = {
   colorscheme = "catppuccin",
 
   -- Add highlight groups in any theme
-  highlights = {
-    init = {
-      -- set the transparency for all of these highlight groups
-      Normal = { bg = "NONE", ctermbg = "NONE" },
-      NormalNC = { bg = "NONE", ctermbg = "NONE" },
-      CursorColumn = { cterm = {}, ctermbg = "NONE", ctermfg = "NONE" },
-      CursorLine = { cterm = {}, ctermbg = "NONE", ctermfg = "NONE" },
-      CursorLineNr = { cterm = {}, ctermbg = "NONE", ctermfg = "NONE" },
-      LineNr = {},
-      SignColumn = {},
-      StatusLine = {},
-      NeoTreeNormal = { bg = "NONE", ctermbg = "NONE" },
-      NeoTreeNormalNC = { bg = "NONE", ctermbg = "NONE" },
-    },
-    -- init = { -- this table overrides highlights in all themes
-    --   Normal = { bg = "#000000" },
-    -- }
-    -- duskfox = { -- a table of overrides/changes to the duskfox theme
-    --   Normal = { bg = "#000000" },
-    -- },
-  },
-
   -- set vim options here (vim.<first_key>.<second_key> = value)
   options = function(local_vim)
     -- set to true or false etc.
@@ -134,9 +112,9 @@ local config = {
       indent_blankline = true,
       lightspeed = false,
       ["neo-tree"] = true,
-      notify = true,
       ["nvim-tree"] = false,
       ["nvim-web-devicons"] = true,
+      notify = true,
       rainbow = true,
       symbols_outline = true,
       telescope = true,
@@ -158,6 +136,7 @@ local config = {
     servers = {
       "sumneko_lua",
       "pyright",
+      "ltex",
       "julials",
       "texlab",
       "marksman",
@@ -272,9 +251,9 @@ local config = {
             flavour = "frappe", -- latte, frappe, macchiato, mocha
             background = { -- :h background
               light = "latte",
-              dark = "mocha",
+              dark = "frappe",
             },
-            transparent_background = true,
+            transparent_background = false,
             term_colors = false,
             dim_inactive = {
               enabled = false,
