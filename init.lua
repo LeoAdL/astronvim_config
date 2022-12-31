@@ -53,6 +53,7 @@ local config = {
         local_vim.g.status_diagnostics_enabled = true -- enable diagnostics in statusline
         local_vim.g.icons_enabled = true -- disable icons in the UI (disable if no nerd font is available requires :PackerSync after changing)
         local_vim.g.ui_notifications_enabled = true -- disable notifications when toggling UI elements
+        local_vim.g.heirline_bufferline = true
         return local_vim
     end,
     -- If you need more control, you can use the function()...end notation
@@ -103,7 +104,7 @@ local config = {
         -- enable or disable highlighting for extra plugins
         plugins = {
             aerial = true,
-            beacon = false,
+            beacon = true,
             bufferline = true,
             cmp = true,
             dashboard = true,
@@ -248,10 +249,10 @@ local config = {
                 as = catppuccin,
                 config = function()
                     require("catppuccin").setup {
-                        flavour = "frappe", -- latte, frappe, macchiato, mocha
+                        flavour = "mocha", -- latte, frappe, macchiato, mocha
                         background = { -- :h background
                             light = "latte",
-                            dark = "frappe",
+                            dark = "mocha",
                         },
                         transparent_background = false,
                         term_colors = false,
@@ -341,6 +342,7 @@ local config = {
             ["RRethy/vim-illuminate"] = {},
             ["mbbill/undotree"] = {},
             ["knubie/vim-kitty-navigator"] = {},
+            ["danilamihailov/beacon.nvim"] = {},
         },
         -- All other entries override the require("<key>").setup({...}) call for default plugins
         ["null-ls"] = function(config) -- overrides `require("null-ls").setup(config)`
